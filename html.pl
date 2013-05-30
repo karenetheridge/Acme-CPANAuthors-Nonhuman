@@ -9,10 +9,18 @@ my $authors = Acme::CPANAuthors->new('Nonhuman');
 
 print "<center>\n";
 
-foreach my $id ($authors->id)
+
+# sort by number of distributions, using a Schwartzian transform
+
+my @ids = map { $_->{id} }
+    sort { $b->{dists} <=> $a->{dists} }
+    map { +{ id => $_, dists => $authors->distributions($_) // 0 } }
+        $authors->id;
+
+foreach my $id (@ids)
 {
     my $url = $authors->avatar_url($id);
-    print q{<img src='}, $url, q{' alt='}, $id, q{' />}, "\n";
+    print '<img src="', $url, '" alt="', $id, '" />', "\n";
 }
 
 print "</center>\n";
