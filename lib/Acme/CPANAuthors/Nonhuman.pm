@@ -48,7 +48,7 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 <img src="http://www.gravatar.com/avatar/c1ccb81aa27de309933384652c7b0635" alt="HIROSE" />
 </br>
 
-<img src="http://www.gravatar.com/avatar/a1bde393aed9fd6987f0116572d052a9" alt="KAARE" />
+<img src="http://www.gravatar.com/avatar/4981bb322567b621afe038246f4dce1a" alt="KAARE" />
 <img src="http://www.gravatar.com/avatar/e9df76d28529b16f451a40a614bceef4" alt="GLEACH" />
 <img src="http://www.gravatar.com/avatar/6192f8305c77cb9caa979b14fae75d24" alt="AKIHITO" />
 </br>
