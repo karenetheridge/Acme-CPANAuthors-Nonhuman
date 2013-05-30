@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package Acme::CPANAuthors::Nonhuman;
-# ABSTRACT: ...
+# ABSTRACT: We are non-human CPAN authors
 
 use Acme::CPANAuthors::Register (
     ETHER => 'Karen Etheridge',
@@ -22,23 +22,20 @@ __END__
 
 =head1 SYNOPSIS
 
-    use $name;
+    use Acme::CPANAuthors;
+    use Acme::CPANAuthors::Nonhuman;
 
-    ...
+    my $authors = Acme::CPANAuthors->new('Nonhuman');
+    my $number   = $authors->count;
+    my @ids      = $authors->id;
+    my @distros  = $authors->distributions('ETHER');
+    my $url      = $authors->avatar_url('MITHALDU');
+    my $kwalitee = $authors->kwalitee('GAURAV');
 
 =head1 DESCRIPTION
 
-...
-
-=head1 FUNCTIONS/METHODS
-
-=over 4
-
-=item * C<foo>
-
-...
-
-=back
+This class provides a hash of PAUSE IDs and names of non-human CPAN authors.
+On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
 =head1 SUPPORT
 
@@ -48,15 +45,16 @@ Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Di
 (or L<bug-Acme-CPANAuthors-Nonhuman@rt.cpan.org|mailto:bug-Acme-CPANAuthors-Nonhuman@rt.cpan.org>).
 I am also usually active on irc, as 'ether' at C<irc.perl.org>.
 
-=head1 ACKNOWLEDGEMENTS
-
-...
+It may well be the case that some of the authors listed here are B<not>
+actually non-human, in which case this absolutely must be reported immediately
+so this module can be corrected! We of the furry and clawed will not stand for
+imposters in our midst.
 
 =head1 SEE ALSO
 
 =begin :list
 
-* L<foo>
+* L<Acme::CPANAuthors> - the main class to manipulate this one.
 
 =end :list
 
