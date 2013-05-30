@@ -3,7 +3,17 @@ use warnings;
 package Acme::CPANAuthors::Nonhuman;
 # ABSTRACT: ...
 
-
+use Acme::CPANAuthors::Register (
+    ETHER => 'Karen Etheridge',
+    MITHALDU => 'Christian Walde',
+    AKIHITO => 'Akihito Takeda',
+    BAHOOTYPR => 'Bahootyper',
+    BIGREDS => 'Avi Greenbury',
+    GAURAV => 'Gaurav Vaidya',
+    HIROSE => 'HIROSE Masaaki',
+    GLEACH => 'Geoffrey Leach',
+    KAARE => 'Kaare Rasmussen',
+);
 
 1;
 __END__
