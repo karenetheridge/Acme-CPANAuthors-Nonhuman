@@ -37,6 +37,25 @@ __END__
 This class provides a hash of PAUSE IDs and names of non-human CPAN authors.
 On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
+=for comment TODO - generate this automatically using a Pod::Weaver section
+=for comment        and by interrogating ourselves for the ID list
+
+=for html <center>
+=for html <img src='http://www.gravatar.com/avatar/6192f8305c77cb9caa979b14fae75d24' alt='AKIHITO' />
+=for html <img src='http://www.gravatar.com/avatar/462c94d33889f90d604d913da9075bf6' alt='BAHOOTYPR' />
+=for html <img src='http://www.gravatar.com/avatar/0d456579ab7f4822420e87d6159bc9fa' alt='BIGREDS' />
+=for html </br>
+
+=for html <img src='http://www.gravatar.com/avatar/bdc5cd06679e732e262f6c1b450a0237' alt='ETHER' />
+=for html <img src='http://www.gravatar.com/avatar/9a3fa34c402691c2f623cba58d01292e' alt='GAURAV' />
+=for html <img src='http://www.gravatar.com/avatar/e9df76d28529b16f451a40a614bceef4' alt='GLEACH' />
+=for html </br>
+
+=for html <img src='http://www.gravatar.com/avatar/c1ccb81aa27de309933384652c7b0635' alt='HIROSE' />
+=for html <img src='http://www.gravatar.com/avatar/a1bde393aed9fd6987f0116572d052a9' alt='KAARE' />
+=for html <img src='http://www.gravatar.com/avatar/f77c2e7572ed0efa7bb025111330e1b2' alt='MITHALDU' />
+=for html </center>
+
 =head1 SUPPORT
 
 =for stopwords irc
