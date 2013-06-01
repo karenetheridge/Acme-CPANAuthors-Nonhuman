@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.002     2013-06-01 10:04:26 PDT-0700 (Karen Etheridge)
           - bump dependency on Acme::CPANAuthors to fix ::Search issue
             (RT#85779)
 

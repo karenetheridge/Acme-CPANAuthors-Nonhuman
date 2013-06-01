@@ -4,7 +4,7 @@ Acme::CPANAuthors::Nonhuman - We are non-human CPAN authors
 
 # VERSION
 
-version 0.001
+version 0.002
 
 # SYNOPSIS
 
@@ -38,6 +38,9 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 <img src="http://www.gravatar.com/avatar/0d456579ab7f4822420e87d6159bc9fa" alt="BIGREDS" />
 <img src="http://www.gravatar.com/avatar/9a3fa34c402691c2f623cba58d01292e" alt="GAURAV" />
 </center>
+
+The original list of authors was determined via
+[The Faces of CPAN](http://hexten.net/cpan-faces/).
 
 # SUPPORT
 
