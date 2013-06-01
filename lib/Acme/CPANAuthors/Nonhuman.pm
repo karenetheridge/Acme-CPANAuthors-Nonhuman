@@ -60,6 +60,9 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
 =end html
 
+The original list of authors was determined via
+L<The Faces of CPAN|http://hexten.net/cpan-faces/>.
+
 =head1 SUPPORT
 
 =for stopwords irc
