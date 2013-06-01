@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - bump dependency on Acme::CPANAuthors to fix ::Search issue
+            (RT#85779)
 
 0.001     2013-05-29 20:18:53 PDT-0700 (Karen Etheridge)
           - Initial release.

@@ -3,6 +3,8 @@ use warnings;
 package Acme::CPANAuthors::Nonhuman;
 # ABSTRACT: We are non-human CPAN authors
 
+use Acme::CPANAuthors 0.16 ();
+
 use Acme::CPANAuthors::Register (
     ETHER => 'Karen Etheridge',
     MITHALDU => 'Christian Walde',
