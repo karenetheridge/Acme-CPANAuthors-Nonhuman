@@ -3,9 +3,10 @@ use warnings;
 package Acme::CPANAuthors::Nonhuman;
 # ABSTRACT: We are non-human CPAN authors
 
-use Acme::CPANAuthors 0.16 ();
+use namespace::autoclean;
+use Acme::CPANAuthors 0.16 ();  # not really needed anymore...
 
-use Acme::CPANAuthors::Register (
+my %authors = (
     ETHER => 'Karen Etheridge',
     MITHALDU => 'Christian Walde',
     AKIHITO => 'Akihito Takeda',
@@ -16,6 +17,13 @@ use Acme::CPANAuthors::Register (
     GLEACH => 'Geoffrey Leach',
     KAARE => 'Kaare Rasmussen',
 );
+
+use Sub::Install;
+Sub::Install::install_sub({
+    code => sub { wantarray ? %authors : \%authors },
+    into => __PACKAGE__,
+    as   => 'authors',
+});
 
 1;
 __END__
