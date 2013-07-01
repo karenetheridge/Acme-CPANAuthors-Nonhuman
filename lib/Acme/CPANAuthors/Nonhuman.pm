@@ -49,19 +49,6 @@ Sub::Install::install_sub({
     as   => 'authors',
 });
 
-1;
-__DATA__
-ETHER
-MITHALDU
-AKIHITO
-BAHOOTYPR
-BIGREDS
-GAURAV
-HIROSE
-GLEACH
-KAARE
-__END__
-
 =pod
 
 =head1 SYNOPSIS
@@ -144,3 +131,15 @@ imposters in our midst.
 =end :list
 
 =cut
+
+1;
+__DATA__
+ETHER
+MITHALDU
+AKIHITO
+BAHOOTYPR
+BIGREDS
+GAURAV
+HIROSE
+GLEACH
+KAARE
