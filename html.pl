@@ -20,7 +20,7 @@ my @ids = map { $_->{id} }
 foreach my $id (@ids)
 {
     my $url = $authors->avatar_url($id);
-    print '<img src="', $url, '" alt="', $id, '" />', "\n";
+    print "<img src=\"$url\" alt=\"$id\" />\n";
 }
 
 print "</center>\n";
