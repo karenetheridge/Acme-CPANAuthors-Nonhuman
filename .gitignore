@@ -15,9 +15,9 @@
 *.gc??
 /test-mydeps-*
 /nytprof*
-/inc/
 .*.sw[a-z]
 /Acme-CPANAuthors-Nonhuman-*
 /todo.txt
 /todo/
 /pod2htmd.tmp
+/01mailrc.txt.gz
