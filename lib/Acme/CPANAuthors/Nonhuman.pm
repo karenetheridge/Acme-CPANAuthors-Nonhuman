@@ -6,16 +6,40 @@ package Acme::CPANAuthors::Nonhuman;
 use namespace::autoclean;
 use Acme::CPANAuthors 0.16 ();  # not really needed anymore...
 
+# TODO: we can get around the whole "we have to load the module before we
+# replace the template code, so we have to make sure it still evaluates"
+# problem by having MungeData simply slurp the .pm file and look for
+# qr/^__DATA__/, rather than being fancy and using <DATA>.
+# Do I really want to document these silly parsing tricks for others to
+# emulate? :D
+
+# predeclare variables so we don't blow up parsing the template code
+my ($DATA, $authorhash);
 my %authors = (
-    ETHER => 'Karen Etheridge',
-    MITHALDU => 'Christian Walde',
-    AKIHITO => 'Akihito Takeda',
-    BAHOOTYPR => 'Bahootyper',
-    BIGREDS => 'Avi Greenbury',
-    GAURAV => 'Gaurav Vaidya',
-    HIROSE => 'HIROSE Masaaki',
-    GLEACH => 'Geoffrey Leach',
-    KAARE => 'Kaare Rasmussen',
+# this data was generated at build time via __DATA__ section and inc::MungeWithData{{
+    $DATA ?  # do nothing if loading before this gets templated
+    do {
+        my $filename = "01mailrc.txt.gz";
+        my @ids = split(' ', $DATA);
+        require HTTP::Tiny;
+        my $response = HTTP::Tiny->new->mirror('http://www.cpan.org/authors/01mailrc.txt.gz', $filename);
+        die "failed to fetch $filename: $response->{status} $response->{reason}\n"
+            if not $response->{success} and $response->{status} ne '304';
+
+        require Acme::CPANAuthors::Utils::Authors;
+        my $authors = Acme::CPANAuthors::Utils::Authors->new($filename);
+        $authorhash = { map {
+            my $name = $authors->author($_)->name;
+            $_ => $name,
+        } @ids };
+
+        "\n" . join('', map {
+            "    $_  => '$authorhash->{$_}',\n";
+        } keys %$authorhash);
+    }
+    : ()
+# end template
+#}}
 );
 
 use Sub::Install;
@@ -26,6 +50,16 @@ Sub::Install::install_sub({
 });
 
 1;
+__DATA__
+ETHER
+MITHALDU
+AKIHITO
+BAHOOTYPR
+BIGREDS
+GAURAV
+HIROSE
+GLEACH
+KAARE
 __END__
 
 =pod
@@ -47,25 +81,40 @@ __END__
 This class provides a hash of PAUSE IDs and names of non-human CPAN authors.
 On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
-=for comment TODO - generate this automatically using a Pod::Weaver section
-=for comment        and by interrogating ourselves for the ID list
-
 =begin html
 
 <center>
-<img src="http://www.gravatar.com/avatar/bdc5cd06679e732e262f6c1b450a0237" alt="ETHER" />
-<img src="http://www.gravatar.com/avatar/f77c2e7572ed0efa7bb025111330e1b2" alt="MITHALDU" />
-<img src="http://www.gravatar.com/avatar/c1ccb81aa27de309933384652c7b0635" alt="HIROSE" />
-</br>
+{{
+    # $author_hash = Acme::CPANAuthors::Utils::Authors object from above template section
+    # TODO: there should be a better way of creating adhoc lists?
+    use Acme::CPANAuthors;
+    {
+        # TODO: put this back in the ACA dist as a factory, and document how to create such
+        # packages on the fly
+        no strict 'refs';
+        no warnings 'redefine';
+        *{'Acme::CPANAuthors::NohumanAdhoc::authors'} = sub { wantarray ? %$authorhash : $authorhash };
+    }
 
-<img src="http://www.gravatar.com/avatar/4981bb322567b621afe038246f4dce1a" alt="KAARE" />
-<img src="http://www.gravatar.com/avatar/e9df76d28529b16f451a40a614bceef4" alt="GLEACH" />
-<img src="http://www.gravatar.com/avatar/6192f8305c77cb9caa979b14fae75d24" alt="AKIHITO" />
-</br>
+    my $authors = bless($authorhash, 'Acme::CPANAuthors');
 
-<img src="http://www.gravatar.com/avatar/462c94d33889f90d604d913da9075bf6" alt="BAHOOTYPR" />
-<img src="http://www.gravatar.com/avatar/0d456579ab7f4822420e87d6159bc9fa" alt="BIGREDS" />
-<img src="http://www.gravatar.com/avatar/9a3fa34c402691c2f623cba58d01292e" alt="GAURAV" />
+    my @ids = map { $_->{id} }
+        sort { $b->{dists} <=> $a->{dists} }
+        map {
+            +{ id => $_, dists => $authors->distributions($_) // 0 } }
+            $authors->id;
+
+    my @lines = map {
+        my $url = $authors->avatar_url($_);
+        "<img src=\"$url\" alt=\"$_\" />\n"
+    } @ids;
+
+    # now break up into groups of 3 with <br>
+    use List::Util 'min';
+    join('',
+        map { ( @lines[$_*3 .. (min($_*3+2, $#lines))], "</br>\n" ) } (0 .. int((@lines-1)/3)),
+    );
+}}
 </center>
 
 =end html
