@@ -70,7 +70,7 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
 =begin html
 
-<center>
+<div style="text-align:center;padding:5px">
 {{
     # $author_hash = Acme::CPANAuthors::Utils::Authors object from above template section
     # TODO: there should be a better way of creating adhoc lists?
@@ -99,10 +99,10 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
     # now break up into groups of 3 with <br>
     use List::Util 'min';
     join('',
-        map { ( @lines[$_*3 .. (min($_*3+2, $#lines))], "</br>\n" ) } (0 .. int((@lines-1)/3)),
+        map { ( @lines[$_*3 .. (min($_*3+2, $#lines))], "<br />\n" ) } (0 .. int((@lines-1)/3)),
     );
 }}
-</center>
+</div>
 
 =end html
 
