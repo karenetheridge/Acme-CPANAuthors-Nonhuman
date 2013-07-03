@@ -4,6 +4,7 @@ Revision history for {{$dist->name}}
           - rewrite code and HTML generation by using embedded templates in
             the .pm file and authors in __DATA__, and a custom Dist::Zilla
             plugin
+          - updated list of PAUSE IDs, by re-scanning cpan-faces
 
 0.002     2013-06-01 10:04:26 PDT-0700 (Karen Etheridge)
           - bump dependency on Acme::CPANAuthors to fix ::Search issue
