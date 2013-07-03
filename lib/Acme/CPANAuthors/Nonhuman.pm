@@ -96,10 +96,11 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
         "<img src=\"$url\" alt=\"$_\" />\n"
     } @ids;
 
-    # now break up into groups of 3 with <br>
+    my $groupsize = 5;
+    # now break up into groups with <br>
     use List::Util 'min';
     join('',
-        map { ( @lines[$_*3 .. (min($_*3+2, $#lines))], "<br />\n" ) } (0 .. int((@lines-1)/3)),
+        map { ( @lines[$_*$groupsize .. (min($_*$groupsize+$groupsize-1, $#lines))], "<br />\n" ) } (0 .. int((@lines-1)/$groupsize)),
     );
 }}
 </div>
