@@ -72,17 +72,6 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
 <div style="text-align:center;padding:5px">
 {{
-    # $author_hash = Acme::CPANAuthors::Utils::Authors object from above template section
-    # TODO: there should be a better way of creating adhoc lists?
-    use Acme::CPANAuthors;
-    {
-        # TODO: put this back in the ACA dist as a factory, and document how
-        # to create such packages on the fly
-        no strict 'refs';
-        no warnings 'redefine';
-        *{'Acme::CPANAuthors::NohumanAdhoc::authors'} = sub { wantarray ? %$authorhash : $authorhash };
-    }
-
     my $authors = bless($authorhash, 'Acme::CPANAuthors');
 
     my @ids = map { $_->{id} }
