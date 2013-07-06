@@ -123,6 +123,10 @@ actually non-human, in which case this absolutely must be reported immediately
 so this module can be corrected! We of the furry and clawed will not stand for
 imposters in our midst.
 
+On the other hand, occasionally new brothers and sisters join the Perl family
+and are not recognized here -- please let me know so they can be added to the
+list.
+
 =head1 SEE ALSO
 
 =begin :list
