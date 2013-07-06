@@ -14,7 +14,7 @@ use Acme::CPANAuthors 0.16 ();  # not really needed anymore...
 # emulate? :D
 
 # predeclare variables so we don't blow up parsing the template code
-my ($DATA, $authorhash);
+my ($DATA, $authors);
 my %authors = (
 # this data was generated at build time via __DATA__ section and inc::MungeWithData{{
     $DATA ?  # do nothing if loading before this gets templated
@@ -27,10 +27,12 @@ my %authors = (
             if not $response->{success} and $response->{status} ne '304';
 
         require Acme::CPANAuthors::Utils::Authors;
-        my $authors = Acme::CPANAuthors::Utils::Authors->new($filename);
-        $authorhash = { map {
-            $_ => $authors->author($_)->name,
+        my $author_data = Acme::CPANAuthors::Utils::Authors->new($filename);
+        my $authorhash = { map {
+            $_ => $author_data->author($_)->name,
         } @ids };
+
+        $authors = bless($authorhash, 'Acme::CPANAuthors');
 
         "\n" . join('', map {
             "    $_  => '$authorhash->{$_}',\n";
@@ -71,8 +73,6 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
 <div style="text-align:center;padding:5px">
 {{
-    my $authors = bless($authorhash, 'Acme::CPANAuthors');
-
     my @ids = map { $_->{id} }
         sort { $b->{dists} <=> $a->{dists} }
         map {
