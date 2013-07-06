@@ -29,8 +29,7 @@ my %authors = (
         require Acme::CPANAuthors::Utils::Authors;
         my $authors = Acme::CPANAuthors::Utils::Authors->new($filename);
         $authorhash = { map {
-            my $name = $authors->author($_)->name;
-            $_ => $name,
+            $_ => $authors->author($_)->name,
         } @ids };
 
         "\n" . join('', map {
