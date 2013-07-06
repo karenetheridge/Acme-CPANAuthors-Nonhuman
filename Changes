@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.003     2013-07-05 18:04:20 PDT-0700 (Karen Etheridge)
           - rewrite code and HTML generation by using embedded templates in
             the .pm file and authors in __DATA__, and a custom Dist::Zilla
             plugin
