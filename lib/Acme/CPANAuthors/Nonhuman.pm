@@ -71,7 +71,7 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
 =begin html
 
-<div style="text-align:center;padding:5px">
+<div style="text-align:center;padding:5px !important">
 {{
     my @ids = map { $_->{id} }
         sort { $b->{dists} <=> $a->{dists} }
