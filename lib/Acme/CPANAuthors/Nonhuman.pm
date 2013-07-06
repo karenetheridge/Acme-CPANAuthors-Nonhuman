@@ -93,7 +93,10 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
     my @lines = map {
         my $url = $authors->avatar_url($_);
-        "<img src=\"$url\" alt=\"$_\" />\n"
+        "<a href=\"http://metacpan.org/author/$_\">"
+            . "<img src=\"$url\" alt=\"$_\" />"
+            . "</a>"
+            . "\n"
     } @ids;
 
     my $groupsize = 5;
