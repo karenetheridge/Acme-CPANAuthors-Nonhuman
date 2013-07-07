@@ -5,6 +5,7 @@ package Acme::CPANAuthors::Nonhuman;
 
 use namespace::autoclean;
 use Acme::CPANAuthors 0.16 ();  # not really needed anymore...
+use utf8;
 
 # TODO: we can get around the whole "we have to load the module before we
 # replace the template code, so we have to make sure it still evaluates"
