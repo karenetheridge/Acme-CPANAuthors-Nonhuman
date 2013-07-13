@@ -102,6 +102,15 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 The original list of authors was determined via
 L<The Faces of CPAN|http://hexten.net/cpan-faces/>.
 
+=for stopwords programmatically
+
+I wrote this module initially as a reaction to a previous L<Acme::CPANAuthors>
+distribution that inappropriately highlighted a particular demographic (it has
+now since been deleted).  Then, I realized that so much of the content I
+wanted to include in this module could be programmatically generated, so I
+continued on as an exercise in templating code at build time using raw data in
+the C<__DATA__> section.
+
 =head1 SUPPORT
 
 =for stopwords irc
