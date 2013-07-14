@@ -37,7 +37,7 @@ my %authors = (
 
         # sort the list by the number of that author's distributions
         @ids = map { $_->{id} }
-            sort { $b->{dists} <=> $a->{dists} }
+            sort { $b->{dists} <=> $a->{dists} || $a->{id} cmp $b->{id} }
             map { +{ id => $_, dists => $authors->distributions($_) // 0 } }
                 @ids;
 
