@@ -76,8 +76,7 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 {{
     my @ids = map { $_->{id} }
         sort { $b->{dists} <=> $a->{dists} }
-        map {
-            +{ id => $_, dists => $authors->distributions($_) // 0 } }
+        map { +{ id => $_, dists => $authors->distributions($_) // 0 } }
             $authors->id;
 
     my @lines = map {
