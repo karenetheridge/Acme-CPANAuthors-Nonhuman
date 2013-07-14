@@ -15,13 +15,13 @@ use utf8;
 # emulate? :D
 
 # predeclare variables so we don't blow up parsing the template code
-my ($DATA, $authors);
+my ($DATA, $authors, @ids);
 my %authors = (
 # this data was generated at build time via __DATA__ section and inc::MungeWithData{{
     $DATA ?  # do nothing if loading before this gets templated
     do {
         my $filename = "01mailrc.txt.gz";
-        my @ids = split(' ', $DATA);
+        @ids = split(' ', $DATA);
         require HTTP::Tiny;
         my $response = HTTP::Tiny->new->mirror('http://www.cpan.org/authors/01mailrc.txt.gz', $filename);
         die "failed to fetch $filename: $response->{status} $response->{reason}\n"
@@ -35,9 +35,15 @@ my %authors = (
 
         $authors = bless($authorhash, 'Acme::CPANAuthors');
 
+        # sort the list by the number of that author's distributions
+        @ids = map { $_->{id} }
+            sort { $b->{dists} <=> $a->{dists} }
+            map { +{ id => $_, dists => $authors->distributions($_) // 0 } }
+                @ids;
+
         "\n" . join('', map {
             "    $_  => '$authorhash->{$_}',\n";
-        } keys %$authorhash);
+        } @ids);
     }
     : ()
 # end template
@@ -74,11 +80,6 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
 <div style="text-align:center;padding:5px !important">
 {{
-    my @ids = map { $_->{id} }
-        sort { $b->{dists} <=> $a->{dists} }
-        map { +{ id => $_, dists => $authors->distributions($_) // 0 } }
-            $authors->id;
-
     my @lines = map {
         my $url = $authors->avatar_url($_);
         "<a href=\"http://metacpan.org/author/$_\">"
