@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - better fix for html image spacing
 
 0.004     2013-07-14 12:21:01 PDT-0700 (Karen Etheridge)
           - simplify creation of ad-hoc author object at build time
