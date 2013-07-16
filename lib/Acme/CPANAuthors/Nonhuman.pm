@@ -4,7 +4,8 @@ package Acme::CPANAuthors::Nonhuman;
 # ABSTRACT: We are non-human CPAN authors
 
 use namespace::autoclean;
-use Acme::CPANAuthors 0.16 ();  # not really needed anymore...
+use Acme::CPANAuthors 0.23 ();  # for Factory support
+use Acme::CPANAuthors::Factory;
 use utf8;
 
 # TODO: we can get around the whole "we have to load the module before we
@@ -33,7 +34,7 @@ my %authors = (
             $_ => $author_data->author($_)->name,
         } @ids };
 
-        $authors = bless($authorhash, 'Acme::CPANAuthors');
+        $authors = Acme::CPANAuthors::Factory->create(Nonhuman_temp => $authorhash);
 
         # sort the list by the number of that author's distributions
         @ids = map { $_->{id} }
