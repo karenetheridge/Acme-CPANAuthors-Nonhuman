@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.005     2013-07-17 09:11:29 PDT-0700 (Karen Etheridge)
           - better fix for html image spacing
           - use new Acme::CPANAuthors::Factory
           - fixed prereqs, to allow operation on 5.8.x (build requires is not
