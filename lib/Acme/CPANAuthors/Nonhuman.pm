@@ -80,17 +80,11 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 =begin html
 
 <div style="text-align:center;padding:0px !important">
-<style type="text/css">
-    img.author-avatar {
-        margin-bottom:5px;
-        margin-right:3px;
-    }
-</style>
 {{
     my @lines = map {
         my $url = $authors->avatar_url($_);
         "<a href=\"http://metacpan.org/author/$_\">"
-            . "<img class=\"author-avatar\" src=\"$url\" alt=\"$_\" />"
+            . "<img style=\"margin-bottom:5px;margin-right:3px !important\" src=\"$url\" alt=\"$_\" />"
             . "</a>"
             . "\n"
     } @ids;
