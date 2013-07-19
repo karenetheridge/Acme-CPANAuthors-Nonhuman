@@ -80,6 +80,7 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 =begin html
 
 <div style="text-align:center;padding:0px !important">
+<!-- this data was generated at build time via __DATA__ section and inc::MungeWithData -->
 {{
     my @lines = map {
         my $url = $authors->avatar_url($_);
