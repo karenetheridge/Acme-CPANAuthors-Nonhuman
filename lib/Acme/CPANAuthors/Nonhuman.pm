@@ -22,7 +22,7 @@ my %authors = (
     $DATA ?  # do nothing if loading before this gets templated
     do {
         my $filename = "01mailrc.txt.gz";
-        @ids = split(' ', $DATA);
+        @ids = split(' ', $DATA);   # awk-style emulation
         require HTTP::Tiny;
         my $response = HTTP::Tiny->new->mirror('http://www.cpan.org/authors/01mailrc.txt.gz', $filename);
         die "failed to fetch $filename: $response->{status} $response->{reason}\n"
