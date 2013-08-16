@@ -24,15 +24,16 @@ my %authors = (
         require Acme::CPANAuthors::Factory;
         $authors = Acme::CPANAuthors::Factory->create(Nonhuman_temp => $authorhash);
 
-        # sort the list by the number of that author's distributions
-        @ids = map { $_->{id} }
+        # list of hashes of { id, name, dists }, sorted by the number of that
+        # author's distributions (to also be used later for HTML generation)
+        @data =
             sort { $b->{dists} <=> $a->{dists} || $a->{id} cmp $b->{id} }
-            map { +{ id => $_, dists => $authors->distributions($_) // 0 } }
+            map { +{ id => $_, name => $authorhash->{$_}, dists => $authors->distributions($_) // 0 } }
                 @ids;
 
         "\n" . join('', map {
-            "    $_  => '$authorhash->{$_}',\n";
-        } @ids);
+            "    $_->{id} => '$_->{name}',\n";
+        } @data);
 }}
 );
 
@@ -68,12 +69,14 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 <!-- this data was generated at build time via __DATA__ section and Dist::Zilla::Plugin::MungeFile::WithData -->
 {{
     my @lines = map {
-        my $url = $authors->avatar_url($_);
-        qq{<a href="http://metacpan.org/author/$_">}
-            . qq{<img style="margin-bottom:5px;margin-right:3px !important" src="$url" alt="$_" />}
-            . "</a>"
+        my $url = $authors->avatar_url($_->{id});
+        my $title = "$_->{id} ($_->{name}), $_->{dists} distribution"
+            . ($_->{dists} != 1 ? 's' : '');
+        qq{<a href="http://metacpan.org/author/$_->{id}">}
+            . qq{<img style="margin-bottom:5px;margin-right:3px !important" }
+            . qq{src="$url" alt="$_->{id}" title="$title" /></a>}
             . "\n"
-    } @ids;
+    } @data;
 
     my $groupsize = 5;
     # now break up into groups with <br>
