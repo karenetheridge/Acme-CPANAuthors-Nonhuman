@@ -16,7 +16,7 @@ use utf8;
 # predeclare variables so we don't blow up parsing the template code
 my ($DATA, $authors, @ids);
 my %authors = (
-# this data was generated at build time via __DATA__ section and inc::MungeWithData{{
+# this data was generated at build time via __DATA__ section and Dist::Zilla::Plugin::MungeFile::WithData{{
     $DATA ?  # do nothing if loading before this gets templated
     do {
         my $filename = "01mailrc.txt.gz";
@@ -79,7 +79,7 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 =begin html
 
 <div style="text-align:center;padding:0px !important">
-<!-- this data was generated at build time via __DATA__ section and inc::MungeWithData -->
+<!-- this data was generated at build time via __DATA__ section and Dist::Zilla::Plugin::MungeFile::WithData -->
 {{
     my @lines = map {
         my $url = $authors->avatar_url($_);
@@ -110,7 +110,8 @@ distribution that inappropriately highlighted a particular demographic (it has
 now since been deleted).  Then, I realized that so much of the content I
 wanted to include in this module could be programmatically generated, so I
 continued on as an exercise in templating code at build time using raw data in
-the C<__DATA__> section.
+the C<__DATA__> section.  That support code has since been split off into its
+own distribution, L<Dist::Zilla::Plugin::MungeFile::WithData>.
 
 =head1 SUPPORT
 

@@ -4,6 +4,8 @@ Revision history for {{$dist->name}}
 
 0.006     2013-08-16 05:32:38Z (Karen Etheridge)
           - proper fix for html image spacing (for real this time?)
+          - split off file munging code (run at build time) into its own
+            distribution (Dist::Zilla::Plugin::MungeFile::WithData).
 
 0.005     2013-07-17 09:11:29 PDT-0700 (Karen Etheridge)
           - better fix for html image spacing
