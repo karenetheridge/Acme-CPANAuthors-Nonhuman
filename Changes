@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - further simplified the build templating code, to take advantage of
+            new features of [MungeFile::WithData]
 
 0.006     2013-08-16 05:32:38Z (Karen Etheridge)
           - proper fix for html image spacing (for real this time?)

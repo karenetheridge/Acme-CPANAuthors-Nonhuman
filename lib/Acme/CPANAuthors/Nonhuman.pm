@@ -6,19 +6,8 @@ package Acme::CPANAuthors::Nonhuman;
 use namespace::autoclean;
 use utf8;
 
-# TODO: we can get around the whole "we have to load the module before we
-# replace the template code, so we have to make sure it still evaluates"
-# problem by having MungeData simply slurp the .pm file and look for
-# qr/^__DATA__/, rather than being fancy and using <DATA>.
-# Do I really want to document these silly parsing tricks for others to
-# emulate? :D
-
-# predeclare variables so we don't blow up parsing the template code
-my ($DATA, $authors, @ids);
 my %authors = (
 # this data was generated at build time via __DATA__ section and Dist::Zilla::Plugin::MungeFile::WithData{{
-    $DATA ?  # do nothing if loading before this gets templated
-    do {
         my $filename = "01mailrc.txt.gz";
         @ids = split(' ', $DATA);   # awk-style emulation
         require HTTP::Tiny;
@@ -44,10 +33,7 @@ my %authors = (
         "\n" . join('', map {
             "    $_  => '$authorhash->{$_}',\n";
         } @ids);
-    }
-    : ()
-# end template
-#}}
+}}
 );
 
 use Sub::Install;
