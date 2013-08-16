@@ -69,8 +69,8 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 {{
     my @lines = map {
         my $url = $authors->avatar_url($_);
-        "<a href=\"http://metacpan.org/author/$_\">"
-            . "<img style=\"margin-bottom:5px;margin-right:3px !important\" src=\"$url\" alt=\"$_\" />"
+        qq{<a href="http://metacpan.org/author/$_">}
+            . qq{<img style="margin-bottom:5px;margin-right:3px !important" src="$url" alt="$_" />}
             . "</a>"
             . "\n"
     } @ids;
