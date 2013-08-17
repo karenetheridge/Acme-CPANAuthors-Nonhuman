@@ -4,7 +4,7 @@ use warnings FATAL => 'all';
 use Test::More;
 use Test::Deep;
 use Test::Warnings;
-use Acme::CPANAuthors;
+use Acme::CPANAuthors 0.16;
 use Acme::CPANAuthors::Nonhuman;
 
 my $authors = Acme::CPANAuthors->new('Nonhuman');
