@@ -132,7 +132,6 @@ list.
 =end :list
 
 =cut
-
 1;
 __DATA__
 ABERNDT
