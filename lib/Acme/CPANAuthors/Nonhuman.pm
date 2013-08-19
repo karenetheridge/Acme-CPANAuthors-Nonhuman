@@ -7,7 +7,7 @@ use namespace::autoclean;
 use utf8;
 
 my %authors = (
-# this data was generated at build time via __DATA__ section and Dist::Zilla::Plugin::MungeFile::WithData{{
+# this data was generated at build time via __DATA__ section and Dist::Zilla::Plugin::MungeFile::WithData {{
         my $filename = "01mailrc.txt.gz";
         @ids = split(' ', $DATA);   # awk-style emulation
         require HTTP::Tiny;
@@ -31,7 +31,9 @@ my %authors = (
             map { +{ id => $_, name => $authorhash->{$_}, dists => $authors->distributions($_) // 0 } }
                 @ids;
 
-        "\n" . join('', map {
+        # begin template output...
+        $plugin->VERSION . "\n"
+        . join('', map {
             "    $_->{id} => '$_->{name}',\n";
         } @data);
 }}
@@ -66,8 +68,7 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 =begin html
 
 <div style="text-align:center;padding:0px !important">
-<!-- this data was generated at build time via __DATA__ section and Dist::Zilla::Plugin::MungeFile::WithData -->
-{{
+<!-- this data was generated at build time via __DATA__ section and Dist::Zilla::Plugin::MungeFile::WithData {{
     my @lines = map {
         my $url = $authors->avatar_url($_->{id});
         my $title = "$_->{id} ($_->{name}), $_->{dists} distribution"
@@ -81,7 +82,10 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
     my $groupsize = 5;
     # now break up into groups with <br>
     use List::Util 'min';
-    join('',
+
+    # begin template output...
+    $plugin->VERSION . " -->\n"
+    . join('',
         map { ( @lines[$_*$groupsize .. (min($_*$groupsize+$groupsize-1, $#lines))], "<br />\n" ) } (0 .. int((@lines-1)/$groupsize)),
     );
 }}
