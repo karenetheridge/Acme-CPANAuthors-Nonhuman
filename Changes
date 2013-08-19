@@ -5,6 +5,7 @@ Revision history for {{$dist->name}}
             new features of [MungeFile::WithData]
           - added tooltip for each avatar image, providing PAUSE id, name, and
             number of distributions
+          - added ORCHEW, VOJ
 
 0.006     2013-08-16 05:32:38Z (Karen Etheridge)
           - proper fix for html image spacing (for real this time?)
