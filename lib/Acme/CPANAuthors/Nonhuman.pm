@@ -8,10 +8,10 @@ use utf8;
 
 my %authors = (
 # this data was generated at build time via __DATA__ section and Dist::Zilla::Plugin::MungeFile::WithData {{
-        my $filename = "01mailrc.txt.gz";
+        my $filename = '01mailrc.txt.gz';
         @ids = split(' ', $DATA);   # awk-style emulation
         require HTTP::Tiny;
-        my $response = HTTP::Tiny->new->mirror('http://www.cpan.org/authors/01mailrc.txt.gz', $filename);
+        my $response = HTTP::Tiny->new->mirror('http://www.cpan.org/authors/' . $filename, $filename);
         die "failed to fetch $filename: $response->{status} $response->{reason}\n"
             if not $response->{success} and $response->{status} ne '304';
 
