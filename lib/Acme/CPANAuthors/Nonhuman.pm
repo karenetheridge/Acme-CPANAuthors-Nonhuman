@@ -15,8 +15,8 @@ my %authors = (
         die "failed to fetch $filename: $response->{status} $response->{reason}\n"
             if not $response->{success} and $response->{status} ne '304';
 
-        require Acme::CPANAuthors::Utils::Authors;
-        my $author_data = Acme::CPANAuthors::Utils::Authors->new($filename);
+        require Parse::CPAN::Authors;
+        my $author_data = Parse::CPAN::Authors->new($filename);
         my $authorhash = { map {
             $_ => $author_data->author($_)->name,
         } @ids };
