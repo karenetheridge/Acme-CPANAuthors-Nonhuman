@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.008     2013-08-29 05:07:48Z (Karen Etheridge)
           - new test added to track down encoding errors in other author
             modules, with the help of cpantesters
 
