@@ -7,6 +7,9 @@ use Test::Warnings;
 use Acme::CPANAuthors 0.16;
 use Acme::CPANAuthors::Nonhuman;
 
+plan skip_all => 'Need a built version of Acme::CPANAuthors::Nonhuman for this test'
+    if -d '.git';
+
 my $authors = Acme::CPANAuthors->new('Nonhuman');
 
 isa_ok($authors, 'Acme::CPANAuthors');
