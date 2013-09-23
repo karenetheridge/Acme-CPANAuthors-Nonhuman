@@ -2,6 +2,7 @@ use strict;
 use warnings FATAL => 'all';
 
 use Test::More;
+use if $ENV{AUTHOR_TESTING}, 'Test::Warnings';
 
 plan skip_all => 'Need a built version of Acme::CPANAuthors::Nonhuman for this test'
     if -d '.git';

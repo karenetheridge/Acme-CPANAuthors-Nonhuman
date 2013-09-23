@@ -3,7 +3,7 @@ use warnings FATAL => 'all';
 
 use Test::More;
 use Test::Deep;
-use Test::Warnings;
+use if $ENV{AUTHOR_TESTING}, 'Test::Warnings';
 use Acme::CPANAuthors 0.16;
 use Acme::CPANAuthors::Nonhuman;
 
