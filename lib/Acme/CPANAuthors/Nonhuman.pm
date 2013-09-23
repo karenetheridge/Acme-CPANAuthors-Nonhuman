@@ -133,6 +133,7 @@ list.
 
 =cut
 1;
+# this list isn't sorted by name but by the date they were added
 __DATA__
 ABERNDT
 ACE
@@ -146,7 +147,6 @@ BIGREDS
 DAIBA
 DOLMEN
 ETHER
-EUGENEK
 FGA
 GAURAV
 GLEACH
@@ -157,10 +157,10 @@ KAARE
 KIBI
 MAXS
 MITHALDU
-ORCHEW
 PERLPIE
+ORCHEW
+VOJ
 ROBMAN
 SIMCOP
 SKINGTON
-VOJ
 ZOUL
