@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.009     2013-09-24 04:32:45Z (Karen Etheridge)
           - more authors added (thanks, Сергей Романов!)
 
 0.008     2013-08-29 05:07:48Z (Karen Etheridge)
