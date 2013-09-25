@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - updated siblings test to help diagnose which other
+            Acme::CPANAuthors:: module out there has a bad $VERSION
 
 0.009     2013-09-24 04:32:45Z (Karen Etheridge)
           - more authors added (thanks, Сергей Романов!)
