@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.010     2013-09-25 16:56:23Z (Karen Etheridge)
           - updated siblings test to help diagnose which other
             Acme::CPANAuthors:: module out there has a bad $VERSION
 

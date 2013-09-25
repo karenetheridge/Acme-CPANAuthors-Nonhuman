@@ -4,7 +4,7 @@ Acme::CPANAuthors::Nonhuman - We are non-human CPAN authors
 
 # VERSION
 
-version 0.009
+version 0.010
 
 # SYNOPSIS
 
@@ -26,7 +26,7 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 <div style="text-align:center;padding:0px !important">
 <!-- this data was generated at build time via \_\_DATA\_\_ section and Dist::Zilla::Plugin::MungeFile::WithData 0.004 -->
 <a href="http://metacpan.org/author/ETHER"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/bdc5cd06679e732e262f6c1b450a0237?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fbdc5cd06679e732e262f6c1b450a0237" alt="ETHER" title="ETHER (Karen Etheridge), 72 distributions" /></a>
-<a href="http://metacpan.org/author/VOJ"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/9827ddb7c8cb132375cf55bf7e624250?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fdcad11c6680a6c59cc31d2bf1b3975e5" alt="VOJ" title="VOJ (Jakob Voss), 46 distributions" /></a>
+<a href="http://metacpan.org/author/VOJ"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/9827ddb7c8cb132375cf55bf7e624250?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fdcad11c6680a6c59cc31d2bf1b3975e5" alt="VOJ" title="VOJ (Jakob Voss), 47 distributions" /></a>
 <a href="http://metacpan.org/author/MITHALDU"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/f77c2e7572ed0efa7bb025111330e1b2?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fd9c28af939032ab0c30fd7be8fdc1040" alt="MITHALDU" title="MITHALDU (Christian Walde), 27 distributions" /></a>
 <a href="http://metacpan.org/author/DOLMEN"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/70d9b050bfe39350c234d710fadfcd39?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F70d9b050bfe39350c234d710fadfcd39" alt="DOLMEN" title="DOLMEN (Olivier Mengue), 21 distributions" /></a>
 <a href="http://metacpan.org/author/IVANWILLS"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/5660261bf7fc03555e8d0f27b09dc6e5?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fc668586858d59a94f3eb761903175f27" alt="IVANWILLS" title="IVANWILLS (Ivan Wills), 17 distributions" /></a>
