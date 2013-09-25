@@ -12,7 +12,7 @@ plan skip_all => 'Need a built version of Acme::CPANAuthors::Nonhuman for this t
         Foo;
 
     use Module::Pluggable
-         search_path => ['Acme::CPANAuthors', 'MyClass::Extend'],
+         search_path => ['Acme::CPANAuthors'],
          sub_name => 'authors';
     use Module::Runtime 'use_module';
 
