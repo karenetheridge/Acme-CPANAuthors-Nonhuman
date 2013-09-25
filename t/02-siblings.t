@@ -22,7 +22,7 @@ plan skip_all => 'Need a built version of Acme::CPANAuthors::Nonhuman for this t
         . "\n"
         . join("\n", map {
             $_ . ' ' . (use_module($_)->VERSION || 'undef')
-        } sort @plugins);
+        } sort { $a cmp $b } @plugins);
 }
 
 pass 'oh hai!';
