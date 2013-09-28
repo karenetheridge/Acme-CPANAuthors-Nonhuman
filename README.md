@@ -4,7 +4,7 @@ Acme::CPANAuthors::Nonhuman - We are non-human CPAN authors
 
 # VERSION
 
-version 0.010
+version 0.011
 
 # SYNOPSIS
 
@@ -59,6 +59,9 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 <a href="http://metacpan.org/author/GAURAV"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/9a3fa34c402691c2f623cba58d01292e?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F9a3fa34c402691c2f623cba58d01292e" alt="GAURAV" title="GAURAV (Gaurav Vaidya), 0 distributions" /></a>
 <a href="http://metacpan.org/author/ORCHEW"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/5660261bf7fc03555e8d0f27b09dc6e5?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F4a66363f9a279ce1a2914752a3b02b17" alt="ORCHEW" title="ORCHEW (Cooper Vertz), 0 distributions" /></a>
 <a href="http://metacpan.org/author/PERLPIE"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/cb9aa3bf6f061556cf82b103c62ebbfe?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fcb9aa3bf6f061556cf82b103c62ebbfe" alt="PERLPIE" title="PERLPIE (perlpie), 0 distributions" /></a>
+<a href="http://metacpan.org/author/SZARATE"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/236a2d411a6c0ed05f9cc9e766b3df4e?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F236a2d411a6c0ed05f9cc9e766b3df4e" alt="SZARATE" title="SZARATE (Santiago Zarate), 0 distributions" /></a>
+<br />
+<a href="http://metacpan.org/author/ZHDA"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/404694046d02a4714216c13dce0761f4?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F404694046d02a4714216c13dce0761f4" alt="ZHDA" title="ZHDA (Denis Zhdanov), 0 distributions" /></a>
 <br />
 
 </div>
