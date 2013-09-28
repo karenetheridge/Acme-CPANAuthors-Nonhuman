@@ -16,7 +16,7 @@ plan skip_all => 'Need a built version of Acme::CPANAuthors::Nonhuman for this t
          sub_name => 'authors';
     use Module::Runtime 'use_module';
 
-    ::diag 'all installed modules in the CPAN::Authors namespace:'
+    ::diag 'all installed modules in the Acme::CPANAuthors namespace:'
         . "\n"
         . join("\n", map {
             $_ . ' '
