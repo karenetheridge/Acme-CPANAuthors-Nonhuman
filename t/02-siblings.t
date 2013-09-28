@@ -25,9 +25,14 @@ plan skip_all => 'Need a built version of Acme::CPANAuthors::Nonhuman for this t
                 # reports that indicate what the bad module(s) are -- e.g.
                 # http://www.cpantesters.org/cpan/report/e7d622fc-2527-11e3-b8b2-96b61dda783b
                 my $version;
-                ::fail($_ . ' has invalid $VERSION!!! please investigate!')
-                    if not eval { $version = use_module($_)->VERSION; 1 };
-                $version || 'undef'
+                if (not eval { $version = use_module($_)->VERSION; 1 })
+                {
+                    ::fail($_ . ' has invalid $VERSION!!! please investigate!');
+                    ::diag('error: ' . ($@ || ''));
+                    no strict 'refs';
+                    $version = ${$_ . '::VERSION'};
+                }
+                defined $version ? $version : 'undef';
             }
         } sort { $a cmp $b } __PACKAGE__->authors);
 }
