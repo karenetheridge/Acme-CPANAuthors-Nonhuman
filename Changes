@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - author data is now generated using the 00whois.xml document,
+            rather than 01mailrc.txt, to get non-asciified author names
+            (requires encoding fixes in new Dist::Zilla)
 
 0.011     2013-09-28 02:04:33Z (Karen Etheridge)
           - more diagnostic updates to siblings test

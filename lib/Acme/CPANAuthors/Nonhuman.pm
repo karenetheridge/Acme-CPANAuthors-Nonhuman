@@ -11,15 +11,15 @@ my %authors = (
 # and {{
     ref($plugin) . ' ' . $plugin->VERSION . "\n"
     . do {
-        my $filename = '01mailrc.txt.gz';
+        my $filename = '00whois.xml';
         @ids = split(' ', $DATA);   # awk-style emulation
         require HTTP::Tiny;
         my $response = HTTP::Tiny->new->mirror('http://www.cpan.org/authors/' . $filename, $filename);
         die "failed to fetch $filename: $response->{status} $response->{reason}\n"
             if not $response->{success} and $response->{status} ne '304';
 
-        require Parse::CPAN::Authors;
-        my $author_data = Parse::CPAN::Authors->new($filename);
+        require Parse::CPAN::Whois;
+        my $author_data = Parse::CPAN::Whois->new($filename);
         my $authorhash = { map {
             $_ => $author_data->author($_)->name,
         } @ids };
