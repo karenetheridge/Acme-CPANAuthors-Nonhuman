@@ -7,7 +7,10 @@ use namespace::autoclean;
 use utf8;
 
 my %authors = (
-# this data was generated at build time via __DATA__ section and {{
+# this data was generated at build time via __DATA__ section
+# and {{
+    ref($plugin) . ' ' . $plugin->VERSION . "\n"
+    . do {
         my $filename = '01mailrc.txt.gz';
         @ids = split(' ', $DATA);   # awk-style emulation
         require HTTP::Tiny;
@@ -31,11 +34,11 @@ my %authors = (
             map { +{ id => $_, name => $authorhash->{$_}, dists => $authors->distributions($_) // 0 } }
                 @ids;
 
-        # begin template output...
-        ref($plugin) . ' ' . $plugin->VERSION . "\n"
-        . join('', map {
+        # return our id => name fields
+        join('', map {
             "    $_->{id} => '$_->{name}',\n";
         } @data);
+    };
 }}
 );
 
