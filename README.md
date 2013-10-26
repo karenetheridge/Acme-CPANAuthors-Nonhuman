@@ -4,7 +4,7 @@ Acme::CPANAuthors::Nonhuman - We are non-human CPAN authors
 
 # VERSION
 
-version 0.012
+version 0.013
 
 # SYNOPSIS
 
@@ -43,24 +43,25 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 <a href="http://metacpan.org/author/MAXS"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/19133cd02103a14b43153d280be27eb5?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F55768f8a3f6cbfde7396a0a34b590181" alt="MAXS" title="MAXS (Maxime Soulé), 3 distributions" /></a>
 <a href="http://metacpan.org/author/AKIHITO"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/6192f8305c77cb9caa979b14fae75d24?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F3a1bdee47e9fdca1cdf3ce4f38651ba2" alt="AKIHITO" title="AKIHITO (Akihito Takeda), 2 distributions" /></a>
 <br />
+<a href="http://metacpan.org/author/CARLOS"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/43d81f6a54ee06bf1190d16f25a2533a?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F43d81f6a54ee06bf1190d16f25a2533a" alt="CARLOS" title="CARLOS (Carlos Lima), 2 distributions" /></a>
 <a href="http://metacpan.org/author/FGA"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/926171279c9a7b096d08ab9266ee2cec?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fa1a232556694ed753ac491703b7df184" alt="FGA" title="FGA (Fabrice Gabolde), 2 distributions" /></a>
 <a href="http://metacpan.org/author/SKINGTON"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/ee492c9fb1360f4ef1a59e37a6716d37?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Ffaf48a00fe1d8c7b282435f54f04c747" alt="SKINGTON" title="SKINGTON (Sam Kington), 2 distributions" /></a>
 <a href="http://metacpan.org/author/ACE"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/d5c9552ccbcd66a7c8c6267897d6259a?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F93433fe8773dc3ead93f928015e3fb13" alt="ACE" title="ACE (yuichi tsunoda), 1 distribution" /></a>
 <a href="http://metacpan.org/author/AKXLIX"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/cfa98d13d05ead9d898af83db46da6a9?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F22376afdd53ef1adc944c7168349cd8d" alt="AKXLIX" title="AKXLIX (azuma, kuniyuki), 1 distribution" /></a>
-<a href="http://metacpan.org/author/ARUN"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/58a4c5847a92a575a3d9230f46668623?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F8a7e477f0a86af02355043e612baad57" alt="ARUN" title="ARUN (Arun Venkataraman), 1 distribution" /></a>
 <br />
+<a href="http://metacpan.org/author/ARUN"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/58a4c5847a92a575a3d9230f46668623?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F8a7e477f0a86af02355043e612baad57" alt="ARUN" title="ARUN (Arun Venkataraman), 1 distribution" /></a>
 <a href="http://metacpan.org/author/BAHOOTYPR"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/462c94d33889f90d604d913da9075bf6?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F297175ea2bf4953bce22d24a1aacc102" alt="BAHOOTYPR" title="BAHOOTYPR (Bahootyper), 1 distribution" /></a>
 <a href="http://metacpan.org/author/BIGREDS"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/0d456579ab7f4822420e87d6159bc9fa?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F0d456579ab7f4822420e87d6159bc9fa" alt="BIGREDS" title="BIGREDS (Avi Greenbury), 1 distribution" /></a>
 <a href="http://metacpan.org/author/DAIBA"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/f64fa36a1fe3c8e7b52cf6e5a21da302?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Ff64fa36a1fe3c8e7b52cf6e5a21da302" alt="DAIBA" title="DAIBA (台場 圭一), 1 distribution" /></a>
 <a href="http://metacpan.org/author/INFRARED"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/a6c59d0a6c1f0042e922ffc033710de0?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fa6c59d0a6c1f0042e922ffc033710de0" alt="INFRARED" title="INFRARED (Michael Kroher), 1 distribution" /></a>
-<a href="http://metacpan.org/author/KIBI"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/024161b6e461084f8cf8690b521e6800?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F024161b6e461084f8cf8690b521e6800" alt="KIBI" title="KIBI (Cyril Brulebois), 1 distribution" /></a>
 <br />
+<a href="http://metacpan.org/author/KIBI"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/024161b6e461084f8cf8690b521e6800?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F024161b6e461084f8cf8690b521e6800" alt="KIBI" title="KIBI (Cyril Brulebois), 1 distribution" /></a>
 <a href="http://metacpan.org/author/ROBMAN"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/5660261bf7fc03555e8d0f27b09dc6e5?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F755e4df78c1aee18b172a67659ecc870" alt="ROBMAN" title="ROBMAN (Rob Manson), 1 distribution" /></a>
 <a href="http://metacpan.org/author/GAURAV"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/9a3fa34c402691c2f623cba58d01292e?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F9a3fa34c402691c2f623cba58d01292e" alt="GAURAV" title="GAURAV (Gaurav Vaidya), 0 distributions" /></a>
 <a href="http://metacpan.org/author/ORCHEW"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/5660261bf7fc03555e8d0f27b09dc6e5?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F4a66363f9a279ce1a2914752a3b02b17" alt="ORCHEW" title="ORCHEW (Cooper Vertz), 0 distributions" /></a>
 <a href="http://metacpan.org/author/PERLPIE"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/cb9aa3bf6f061556cf82b103c62ebbfe?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fcb9aa3bf6f061556cf82b103c62ebbfe" alt="PERLPIE" title="PERLPIE (perlpie), 0 distributions" /></a>
-<a href="http://metacpan.org/author/SZARATE"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/236a2d411a6c0ed05f9cc9e766b3df4e?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F236a2d411a6c0ed05f9cc9e766b3df4e" alt="SZARATE" title="SZARATE (Santiago Zarate), 0 distributions" /></a>
 <br />
+<a href="http://metacpan.org/author/SZARATE"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/236a2d411a6c0ed05f9cc9e766b3df4e?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F236a2d411a6c0ed05f9cc9e766b3df4e" alt="SZARATE" title="SZARATE (Santiago Zarate), 0 distributions" /></a>
 <a href="http://metacpan.org/author/ZHDA"><img style="margin-bottom:5px;margin-right:3px !important" src="http://www.gravatar.com/avatar/404694046d02a4714216c13dce0761f4?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2F404694046d02a4714216c13dce0761f4" alt="ZHDA" title="ZHDA (Denis Zhdanov), 0 distributions" /></a>
 <br />
 
@@ -107,6 +108,7 @@ This software is copyright (c) 2013 by Karen Etheridge.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-# CONTRIBUTOR
+# CONTRIBUTORS
 
-Сергей Романов <complefor@rambler.ru>
+- Carlos Lima <carlos@cpan.org>
+- Сергей Романов <complefor@rambler.ru>
