@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - welcome CARLOS, our latest member!
 
 0.012     2013-10-24 05:25:54Z (Karen Etheridge)
           - author data is now generated using the 00whois.xml document,
