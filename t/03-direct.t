@@ -11,6 +11,12 @@ use Acme::CPANAuthors::Nonhuman;
 
 my $authors = 'Acme::CPANAuthors::Nonhuman';
 
+cmp_deeply(
+    { $authors->authors },
+    superhashof({ ETHER => 'Karen Etheridge' }),
+    'ETHER is in the list of ids returned',
+);
+
 is($authors->category, 'Nonhuman', 'respect the "category" interface');
 
 done_testing;
