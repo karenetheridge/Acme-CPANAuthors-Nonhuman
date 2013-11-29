@@ -49,6 +49,12 @@ Sub::Install::install_sub({
     as   => 'authors',
 });
 
+Sub::Install::install_sub({
+    code => sub { 'Nonhuman' },
+    into => __PACKAGE__,
+    as   => 'category',
+});
+
 =pod
 
 =head1 SYNOPSIS
