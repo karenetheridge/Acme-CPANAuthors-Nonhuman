@@ -2,13 +2,13 @@ use strict;
 use warnings FATAL => 'all';
 
 use Test::More;
-use Test::Deep;
 use if $ENV{AUTHOR_TESTING}, 'Test::Warnings';
+
+BEGIN { plan skip_all => 'Need a built version of Acme::CPANAuthors::Nonhuman for this test' if -d '.git' }
+
+use Test::Deep;
 use Acme::CPANAuthors 0.16;
 use Acme::CPANAuthors::Nonhuman;
-
-plan skip_all => 'Need a built version of Acme::CPANAuthors::Nonhuman for this test'
-    if -d '.git';
 
 my $authors = Acme::CPANAuthors->new('Nonhuman');
 
