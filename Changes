@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.014     2013-11-29 20:11:02Z
           - add 'category' interface, to match what is given to other
             Acme::CPANAuthors::* modules
 
