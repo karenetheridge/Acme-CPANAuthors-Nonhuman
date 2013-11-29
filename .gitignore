@@ -1,9 +1,5 @@
 /.build/
 !.gitignore
-/cover_db/
-/test-mydeps-*
-/nytprof*
-.*.sw[a-z]
 /Acme-CPANAuthors-Nonhuman-*
 /todo.txt
 /todo/
