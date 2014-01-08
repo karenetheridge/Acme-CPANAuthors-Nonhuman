@@ -6,64 +6,64 @@ Revision history for {{$dist->name}}
           - add 'category' interface, to match what is given to other
             Acme::CPANAuthors::* modules
 
-0.013     2013-10-26 17:01:19Z (Karen Etheridge)
+0.013     2013-10-26 17:01:19Z
           - welcome CARLOS, our latest member!
 
-0.012     2013-10-24 05:25:54Z (Karen Etheridge)
+0.012     2013-10-24 05:25:54Z
           - author data is now generated using the 00whois.xml document,
             rather than 01mailrc.txt, to get non-asciified author names
             (requires encoding fixes in new Dist::Zilla)
 
-0.011     2013-09-28 02:04:33Z (Karen Etheridge)
+0.011     2013-09-28 02:04:33Z
           - more diagnostic updates to siblings test
           - more authors added
 
-0.010     2013-09-25 16:56:23Z (Karen Etheridge)
+0.010     2013-09-25 16:56:23Z
           - updated siblings test to help diagnose which other
             Acme::CPANAuthors:: module out there has a bad $VERSION
 
-0.009     2013-09-24 04:32:45Z (Karen Etheridge)
+0.009     2013-09-24 04:32:45Z
           - more authors added (thanks, Сергей Романов!)
 
-0.008     2013-08-29 05:07:48Z (Karen Etheridge)
+0.008     2013-08-29 05:07:48Z
           - new test added to track down encoding errors in other author
             modules, with the help of cpantesters
 
-0.007     2013-08-20 01:54:44Z (Karen Etheridge)
+0.007     2013-08-20 01:54:44Z
           - further simplified the build templating code, to take advantage of
             new features of [MungeFile::WithData]
           - added tooltip for each avatar image, providing PAUSE id, name, and
             number of distributions
           - added ORCHEW, VOJ
 
-0.006     2013-08-16 05:32:38Z (Karen Etheridge)
+0.006     2013-08-16 05:32:38Z
           - proper fix for html image spacing (for real this time?)
           - split off file munging code (run at build time) into its own
             distribution (Dist::Zilla::Plugin::MungeFile::WithData).
 
-0.005     2013-07-17 09:11:29 PDT-0700 (Karen Etheridge)
+0.005     2013-07-17 09:11:29 PDT-0700
           - better fix for html image spacing
           - use new Acme::CPANAuthors::Factory
           - fixed prereqs, to allow operation on 5.8.x (build requires is not
             the same thing as develop requires)
 
-0.004     2013-07-14 12:21:01 PDT-0700 (Karen Etheridge)
+0.004     2013-07-14 12:21:01 PDT-0700
           - simplify creation of ad-hoc author object at build time
           - (hopefully) fix html cell padding issue on metacpan
           - use utf8 pragma, in case some names contain unicode characters
           - include a bit of background to why I wrote this
           - id=>name hash is also kept sorted
 
-0.003     2013-07-05 18:04:20 PDT-0700 (Karen Etheridge)
+0.003     2013-07-05 18:04:20 PDT-0700
           - rewrite code and HTML generation by using embedded templates in
             the .pm file and authors in __DATA__, and a custom Dist::Zilla
             plugin
           - updated list of PAUSE IDs, by re-scanning cpan-faces
 
-0.002     2013-06-01 10:04:26 PDT-0700 (Karen Etheridge)
+0.002     2013-06-01 10:04:26 PDT-0700
           - bump dependency on Acme::CPANAuthors to fix ::Search issue
             (RT#85779)
 
-0.001     2013-05-29 20:18:53 PDT-0700 (Karen Etheridge)
+0.001     2013-05-29 20:18:53 PDT-0700
           - Initial release.
 
