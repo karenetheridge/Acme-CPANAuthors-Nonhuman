@@ -1,6 +1,6 @@
 /.build/
-!.gitignore
-/Acme-CPANAuthors-Nonhuman-*
+/Acme-CPANAuthors-Nonhuman-*/
+/Acme-CPANAuthors-Nonhuman-*.tar.gz
 /todo.txt
 /todo/
 /pod2htmd.tmp
