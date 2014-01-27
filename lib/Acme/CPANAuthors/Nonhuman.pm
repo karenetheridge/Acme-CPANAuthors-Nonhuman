@@ -114,7 +114,7 @@ now since been deleted).  Then, I realized that so much of the content I
 wanted to include in this module could be programmatically generated, so I
 continued on as an exercise in templating code at build time using raw data in
 the C<__DATA__> section.  That support code has since been split off into its
-own distribution, L<Dist::Zilla::Plugin::MungeFile::WithData>.
+own distribution, L<Dist::Zilla::Plugin::MungeFile::WithDataSection>.
 
 =head1 SUPPORT
 
