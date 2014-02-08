@@ -79,9 +79,11 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
 <div style="text-align:center;padding:0px !important">
 <!-- this data was generated at build time via __DATA__ section and {{
+    use HTML::Entities;
     my @lines = map {
         my $url = $authors->avatar_url($_->{id});
-        my $title = "$_->{id} ($_->{name}), $_->{dists} distribution"
+        my $name = encode_entities($_->{name});
+        my $title = "$_->{id} ($name), $_->{dists} distribution"
             . ($_->{dists} != 1 ? 's' : '');
         qq{<a href="http://metacpan.org/author/$_->{id}">}
             . qq{<img style="margin-bottom:5px;margin-right:3px !important" }
