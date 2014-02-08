@@ -86,8 +86,11 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
         my $title = "$_->{id} ($name), $_->{dists} distribution"
             . ($_->{dists} != 1 ? 's' : '');
         qq{<a href="http://metacpan.org/author/$_->{id}">}
-            . qq{<img style="margin-bottom:5px;margin-right:3px !important" }
-            . qq{src="$url" alt="$_->{id}" title="$title" /></a>}
+            . q{<span>}
+            . q{<img style="margin-bottom:5px;margin-right:3px !important" }
+            . qq{src="$url" alt="$_->{id}" title="$title" />}
+            . q{</span>}
+            . q{</a>}
             . "\n"
     } @data;
 
