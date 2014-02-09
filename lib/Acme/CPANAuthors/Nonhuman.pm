@@ -4,7 +4,6 @@ package Acme::CPANAuthors::Nonhuman;
 # ABSTRACT: We are non-human CPAN authors
 # vim: set ts=8 sw=4 tw=78 et :
 
-use namespace::autoclean;
 use utf8;
 
 my %authors = (
