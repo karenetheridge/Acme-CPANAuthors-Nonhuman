@@ -9,6 +9,7 @@ use utf8;
 my %authors = (
 # this data was generated at build time via __DATA__ section
 # and {{
+    # begin code run at build time
     ref($plugin) . ' ' . $plugin->VERSION . "\n"
     . do {
         my $filename = '00whois.xml';
@@ -39,6 +40,7 @@ my %authors = (
             "    $_->{id} => '$_->{name}',\n";
         } @data);
     };
+    # end code run at build time
 }}
 );
 
