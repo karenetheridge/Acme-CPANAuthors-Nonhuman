@@ -122,6 +122,21 @@ continued on as an exercise in templating code at build time using raw data in
 the C<__DATA__> section.  That support code has since been split off into its
 own distribution, L<Dist::Zilla::Plugin::MungeFile::WithDataSection>.
 
+This module has continued to evolve, as rough edges in bits of the toolchain
+are polished.  These improvements include:
+
+=for stopwords metacpan
+
+=begin :list
+
+* better HTML rendering in L<metacpan|https://metacpan.org>
+* proper encoding handling in L<Dist::Zilla> and many of its plugins
+* parsing improvements in L<PPI>
+* heuristic refinement in kwalitee metrics in L<Module::CPANTS::Analyse>
+* additional interfaces added to L<Acme::CPANAuthors>
+
+=end :list
+
 =head1 SUPPORT
 
 =for stopwords irc
