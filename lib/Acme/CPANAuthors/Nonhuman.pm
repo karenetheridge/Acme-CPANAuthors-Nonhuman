@@ -2,6 +2,7 @@ use strict;
 use warnings;
 package Acme::CPANAuthors::Nonhuman;
 # ABSTRACT: We are non-human CPAN authors
+# KEYWORDS: acmeism cpan authors animals fun
 # vim: set ts=8 sw=4 tw=78 et :
 
 use utf8;
