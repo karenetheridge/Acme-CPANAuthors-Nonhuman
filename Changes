@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.016     2014-06-29 16:53:57Z
           - welcome our newest members, JTRAMMELL, BENW and NMELNICK!
 
 0.015     2014-02-08 23:44:12Z
