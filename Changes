@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - updated module counts
 
 0.016     2014-06-29 16:53:57Z
           - welcome our newest members, JTRAMMELL, BENW and NMELNICK!
