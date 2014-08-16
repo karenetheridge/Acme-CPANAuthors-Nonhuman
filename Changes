@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.017     2014-08-16 23:49:11Z
           - updated module counts
 
 0.016     2014-06-29 16:53:57Z
