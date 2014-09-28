@@ -79,7 +79,8 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
 =begin html
 
-<div style="text-align:center;padding:0px!important;overflow-y:hidden;">
+<div style="text-align:center;padding:0px!important;overflow-y:hidden;
+margin-left: auto; margin-right: auto; max-width: 430px">
 <!-- this data was generated at build time via __DATA__ section and {{
     use HTML::Entities;
     my @lines = map {
@@ -96,15 +97,9 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
             . "\n"
     } @data;
 
-    my $groupsize = 5;
-    # now break up into groups with <br>
-    use List::Util 'min';
-
     # begin template output...
     ref($plugin) . ' ' . $plugin->VERSION . " -->\n"
-    . join('',
-        map { ( @lines[$_*$groupsize .. (min($_*$groupsize+$groupsize-1, $#lines))], "<br />\n" ) } (0 .. int((@lines-1)/$groupsize)),
-    );
+    . join('', @lines) . "\n";
 }}
 </div>
 
