@@ -90,16 +90,15 @@ margin-left: auto; margin-right: auto; max-width: 430px">
             . ($_->{dists} != 1 ? 's' : '');
         qq{<a href="http://metacpan.org/author/$_->{id}">}
             . q{<span>}
-            . q{<img style="margin-bottom:5px;margin-right:3px !important" }
+            . q{<img style="margin: 0 5px 5px 0;" width="80" height="80" }
             . qq{src="$url" alt="$_->{id}" title="$title" />}
             . q{</span>}
             . q{</a>}
-            . "\n"
     } @data;
 
     # begin template output...
     ref($plugin) . ' ' . $plugin->VERSION . " -->\n"
-    . join('', @lines) . "\n";
+    . join("<!--\n-->", @lines) . "\n";
 }}
 </div>
 
