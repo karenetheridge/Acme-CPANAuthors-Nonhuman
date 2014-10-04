@@ -79,7 +79,8 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
 =begin html
 
-<div style="text-align:center;padding:0px !important">
+<div style="text-align:center;padding:0px!important;overflow-y:hidden;
+margin-left: auto; margin-right: auto; max-width: 430px">
 <!-- this data was generated at build time via __DATA__ section and {{
     use HTML::Entities;
     my @lines = map {
@@ -89,22 +90,15 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
             . ($_->{dists} != 1 ? 's' : '');
         qq{<a href="http://metacpan.org/author/$_->{id}">}
             . q{<span>}
-            . q{<img style="margin-bottom:5px;margin-right:3px !important" }
+            . q{<img style="margin: 0 5px 5px 0;" width="80" height="80" }
             . qq{src="$url" alt="$_->{id}" title="$title" />}
             . q{</span>}
             . q{</a>}
-            . "\n"
     } @data;
-
-    my $groupsize = 5;
-    # now break up into groups with <br>
-    use List::Util 'min';
 
     # begin template output...
     ref($plugin) . ' ' . $plugin->VERSION . " -->\n"
-    . join('',
-        map { ( @lines[$_*$groupsize .. (min($_*$groupsize+$groupsize-1, $#lines))], "<br />\n" ) } (0 .. int((@lines-1)/$groupsize)),
-    );
+    . join("<!--\n-->", @lines) . "\n";
 }}
 </div>
 
