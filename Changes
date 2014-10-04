@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - clean up HTML generation, for better rendering with recent changes
+            to metacpan layout (Graham Knop, PR#4)
 
 0.017     2014-08-16 23:49:11Z
           - updated module counts
