@@ -29,6 +29,12 @@ my %authors = (
         require Acme::CPANAuthors::Factory;
         $authors = Acme::CPANAuthors::Factory->create(Nonhuman_temp => $authorhash);
 
+        require JSON::MaybeXS;
+        my $decoder = JSON::MaybeXS->new(utf8 => 0);
+        $avatar_urls = { map {
+            $_ => ( ($decoder->decode(( HTTP::Tiny->new->get('http://api.metacpan.org/v0/author/' . $_) // {})->{content}) // {})->{gravatar_url} =~ s/s=\K130/80/gr )
+        } @ids };
+
         # list of hashes of { id, name, dists }, sorted by the number of that
         # author's distributions (to also be used later for HTML generation)
         @data =
@@ -79,14 +85,13 @@ margin-left: auto; margin-right: auto; max-width: 430px">
 <!-- this data was generated at build time via __DATA__ section and {{
     use HTML::Entities;
     my @lines = map {
-        my $url = $authors->avatar_url($_->{id});
         my $name = encode_entities($_->{name});
         my $title = "$_->{id} ($name), $_->{dists} distribution"
             . ($_->{dists} != 1 ? 's' : '');
         qq{<a href="http://metacpan.org/author/$_->{id}">}
             . q{<span>}
             . q{<img style="margin: 0 5px 5px 0;" width="80" height="80" }
-            . qq{src="$url" alt="$_->{id}" title="$title" />}
+            . qq{src="$avatar_urls->{ $_->{id} }" alt="$_->{id}" title="$title" />}
             . q{</span>}
             . q{</a>}
     } @data;
