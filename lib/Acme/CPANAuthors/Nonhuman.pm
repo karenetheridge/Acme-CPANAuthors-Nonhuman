@@ -122,15 +122,12 @@ are polished.  These improvements include:
 
 =for stopwords metacpan
 
-=begin :list
-
+=for :list
 * better HTML rendering in L<metacpan|https://metacpan.org>
 * proper encoding handling in L<Dist::Zilla> and many of its plugins
 * parsing improvements in L<PPI>
 * heuristic refinement in kwalitee metrics in L<Module::CPANTS::Analyse>
 * additional interfaces added to L<Acme::CPANAuthors>
-
-=end :list
 
 =head1 SUPPORT
 
@@ -151,11 +148,8 @@ list.
 
 =head1 SEE ALSO
 
-=begin :list
-
+=for :list
 * L<Acme::CPANAuthors> - the main class to manipulate this one.
-
-=end :list
 
 =cut
 1;
