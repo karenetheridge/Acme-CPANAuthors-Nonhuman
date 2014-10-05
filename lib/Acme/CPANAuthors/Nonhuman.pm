@@ -7,12 +7,11 @@ package Acme::CPANAuthors::Nonhuman;
 
 use utf8;
 
-my %authors = (
 # this data was generated at build time via __DATA__ section
 # and {{
     # begin code run at build time
     ref($plugin) . ' ' . $plugin->VERSION . "\n"
-    . do {
+    . 'my %authors = (' . "\n" . do {
         my $filename = '00whois.xml';
         @ids = split(' ', $DATA);   # awk-style emulation
         require HTTP::Tiny;
@@ -46,14 +45,21 @@ my %authors = (
         join('', map {
             "    $_->{id} => '$_->{name}',\n";
         } @data);
-    };
+    } . ");\n\n"
+    . 'my %avatar_urls = (' . "\n" . do {
+        join('', map {
+            "    $_->{id} => '$avatar_urls->{ $_->{id} }',\n"
+        } @data)
+    } . ");"
     # end code run at build time
 }}
-);
+# end data generated at build time
 
 sub authors { wantarray ? %authors : \%authors }
 
 sub category { 'Nonhuman' }
+
+sub avatar_url { return $avatar_urls{$_[1]} }
 
 =pod
 
@@ -138,6 +144,16 @@ Returns the hash of authors in list context, or a hashref in scalar context.
 =head2 category
 
 Returns C<'Nonhuman'>.
+
+=head2 avatar_url
+
+=for stopwords gravatar
+
+Returns the gravatar url of the id shown on L<https://metacpan.org>. Note this
+is B<not> necessarily the same result as C<< Acme::CPANAuthors->url($id) >>:
+this module queries metacpan directly, where a user may have overridden the
+gravatar in their profile; whereas L<Acme::CPANAuthors> (via L<Gravatar::URL>)
+performs a lookup on the email address registered with PAUSE.
 
 =head1 SUPPORT
 

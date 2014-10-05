@@ -3,6 +3,8 @@ Revision history for {{$dist->name}}
 {{$NEXT}}
           - fix a few gravatars in html documentation by using gravatars as
             configured on metacpan, rather than asking Acme::CPANAuthors
+          - add "avatar_url" method, for returning the metacpan gravatar (as
+            compared to the old result from Acme::CPANAuthors->avatar_url)
 
 0.018     2014-10-04 21:48:34Z
           - clean up HTML generation, for better rendering with recent changes

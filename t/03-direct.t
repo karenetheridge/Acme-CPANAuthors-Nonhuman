@@ -25,4 +25,8 @@ cmp_deeply(
 
 is($authors->category, 'Nonhuman', 'respect the "category" interface');
 
+# old: http://www.gravatar.com/avatar/bdc5cd06679e732e262f6c1b450a0237?d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fbdc5cd06679e732e262f6c1b450a0237
+# new: https://secure.gravatar.com/avatar/bdc5cd06679e732e262f6c1b450a0237?s=80&d=identicon
+like($authors->avatar_url('ETHER'), qr{^https://}, 'we (via metacpan) return secure gravatars, rather than the junky old ones');
+
 done_testing;
