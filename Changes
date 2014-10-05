@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.019     2014-10-05 01:40:11Z
           - fix a few gravatars in html documentation by using gravatars as
             configured on metacpan, rather than asking Acme::CPANAuthors
           - add "avatar_url" method, for returning the metacpan gravatar (as
