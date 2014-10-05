@@ -14,7 +14,13 @@ my $authors = 'Acme::CPANAuthors::Nonhuman';
 cmp_deeply(
     { $authors->authors },
     superhashof({ ETHER => 'Karen Etheridge' }),
-    'ETHER is in the list of ids returned',
+    'ETHER is in the list of ids returned (list context)',
+);
+
+cmp_deeply(
+    scalar $authors->authors,
+    superhashof({ ETHER => 'Karen Etheridge' }),
+    'ETHER is in the hashref of ids returned (scalar context)',
 );
 
 is($authors->category, 'Nonhuman', 'respect the "category" interface');
