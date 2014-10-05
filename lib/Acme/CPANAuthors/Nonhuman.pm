@@ -45,18 +45,9 @@ my %authors = (
 }}
 );
 
-use Sub::Install;
-Sub::Install::install_sub({
-    code => sub { wantarray ? %authors : \%authors },
-    into => __PACKAGE__,
-    as   => 'authors',
-});
+sub authors { wantarray ? %authors : \%authors }
 
-Sub::Install::install_sub({
-    code => sub { 'Nonhuman' },
-    into => __PACKAGE__,
-    as   => 'category',
-});
+sub category { 'Nonhuman' }
 
 =pod
 
@@ -71,6 +62,10 @@ Sub::Install::install_sub({
     my @distros  = $authors->distributions('ETHER');
     my $url      = $authors->avatar_url('MITHALDU');
     my $kwalitee = $authors->kwalitee('GAURAV');
+
+    my %authorshash    = Acme::CPANAuthors::Nonhuman->authors;
+    my $authorshashref = Acme::CPANAuthors::Nonhuman->authors;
+    my $category       = Acme::CPANAuthors::Nonhuman->category;
 
 =head1 DESCRIPTION
 
@@ -128,6 +123,16 @@ are polished.  These improvements include:
 * parsing improvements in L<PPI>
 * heuristic refinement in kwalitee metrics in L<Module::CPANTS::Analyse>
 * additional interfaces added to L<Acme::CPANAuthors>
+
+=head1 METHODS
+
+=head2 authors
+
+Returns the hash of authors in list context, or a hashref in scalar context.
+
+=head2 category
+
+Returns C<'Nonhuman'>.
 
 =head1 SUPPORT
 
