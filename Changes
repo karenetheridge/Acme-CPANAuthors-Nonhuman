@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+          - welcome our newest members, CKRAS, EAST and EUGENEK!
 
 0.019     2014-10-05 01:40:11Z
           - fix a few gravatars in html documentation by using gravatars as
