@@ -28,7 +28,7 @@ use utf8;
         require Acme::CPANAuthors::Factory;
         $authors = Acme::CPANAuthors::Factory->create(Nonhuman_temp => $authorhash);
 
-        require JSON::MaybeXS;
+        require JSON::MaybeXS; JSON::MaybeXS->VERSION('1.001000');
         my $decoder = JSON::MaybeXS->new(utf8 => 0);
         $avatar_urls = { map {
             $_ => ( ($decoder->decode(( HTTP::Tiny->new->get('http://api.metacpan.org/v0/author/' . $_) // {})->{content}) // {})->{gravatar_url} =~ s/s=\K130/80/gr )
