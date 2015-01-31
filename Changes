@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
           - goodbye ZOUL, KIBI; you seem to want to be human now
+          - change the max-width of the container div to be a percentage
+            rather than absolute pixel count, improving formatting on wide
+            displays
 
 0.020     2014-10-14 00:47:35Z
           - welcome our newest members, CKRAS, EAST and EUGENEK!
