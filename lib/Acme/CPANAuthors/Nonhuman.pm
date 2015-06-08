@@ -5,6 +5,8 @@ package Acme::CPANAuthors::Nonhuman;
 # KEYWORDS: acmeism cpan authors animals fun
 # vim: set ts=8 sw=4 tw=78 et :
 
+our $VERSION = '0.022';
+
 use utf8;
 
 # this data was generated at build time via __DATA__ section
