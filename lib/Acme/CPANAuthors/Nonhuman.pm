@@ -5,7 +5,7 @@ package Acme::CPANAuthors::Nonhuman;
 # KEYWORDS: acmeism cpan authors animals fun
 # vim: set ts=8 sts=4 sw=4 tw=115 et :
 
-our $VERSION = '0.022';
+our $VERSION = '0.023';
 
 use utf8;
 
