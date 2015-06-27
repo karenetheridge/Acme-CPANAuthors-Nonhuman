@@ -3,7 +3,7 @@ use warnings;
 package Acme::CPANAuthors::Nonhuman;
 # ABSTRACT: We are non-human CPAN authors
 # KEYWORDS: acmeism cpan authors animals fun
-# vim: set ts=8 sts=4 sw=4 tw=78 et :
+# vim: set ts=8 sts=4 sw=4 tw=115 et :
 
 our $VERSION = '0.022';
 
