@@ -159,12 +159,6 @@ performs a lookup on the email address registered with PAUSE.
 
 =head1 SUPPORT
 
-=for stopwords irc
-
-Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=Acme-CPANAuthors-Nonhuman>
-(or L<bug-Acme-CPANAuthors-Nonhuman@rt.cpan.org|mailto:bug-Acme-CPANAuthors-Nonhuman@rt.cpan.org>).
-I am also usually active on irc, as 'ether' at C<irc.perl.org>.
-
 It may well be the case that some of the authors listed here are B<not>
 actually non-human, in which case this absolutely must be reported immediately
 so this module can be corrected! We of the furry and clawed will not stand for
