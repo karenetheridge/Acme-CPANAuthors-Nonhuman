@@ -10,10 +10,10 @@ our $VERSION = '0.024';
 use utf8;
 
 # this data was generated at build time via __DATA__ section
-# and {{
+# and {{ ref($plugin) }} {{ $plugin->VERSION }}
+my %authors = (
+{{
     # begin code run at build time
-    ref($plugin) . ' ' . $plugin->VERSION . "\n"
-    . 'my %authors = (' . "\n" . do {
         my $filename = '00whois.xml';
         @ids = grep { !/^#/ } split /\R/, $DATA;   # line-by-line, ignoring comments
         require HTTP::Tiny;
@@ -47,14 +47,15 @@ use utf8;
         join('', map {
             "    $_->{id} => '$_->{name}',\n";
         } @data);
-    } . ");\n\n"
-    . 'my %avatar_urls = (' . "\n" . do {
+    # end code run at build time
+}});
+
+my %avatar_urls = (
+{{
         join('', map {
             "    $_->{id} => '$avatar_urls->{ $_->{id} }',\n"
         } @data)
-    } . ");"
-    # end code run at build time
-}}
+}});
 # end data generated at build time
 
 sub authors { wantarray ? %authors : \%authors }
@@ -90,7 +91,9 @@ On the internet, no one knows you're a cat (unless your avatar gives it away)!
 
 <div style="text-align:center;padding:0px!important;overflow-y:hidden;
 margin-left: auto; margin-right: auto; max-width: 50%">
-<!-- this data was generated at build time via __DATA__ section and {{
+
+<!-- this data was generated at build time via __DATA__ section and {{ ref($plugin) }} {{ $plugin->VERSION }} -->
+{{
     use HTML::Entities;
     my @lines = map {
         my $name = encode_entities($_->{name});
@@ -104,10 +107,9 @@ margin-left: auto; margin-right: auto; max-width: 50%">
             . q{</a>}
     } @data;
 
-    # begin template output...
-    ref($plugin) . ' ' . $plugin->VERSION . " -->\n"
-    . join("<!--\n-->", @lines) . "\n";
+    join("<!--\n-->", @lines);
 }}
+
 </div>
 
 =end html
