@@ -28,7 +28,7 @@ my %authors = (
         } @ids };
 
         require Acme::CPANAuthors::Factory;
-        $authors = Acme::CPANAuthors::Factory->create(Nonhuman_temp => $authorhash);
+        my $authors = Acme::CPANAuthors::Factory->create(Nonhuman_temp => $authorhash);
 
         require JSON::MaybeXS; JSON::MaybeXS->VERSION('1.001000');
         my $decoder = JSON::MaybeXS->new(utf8 => 0);
