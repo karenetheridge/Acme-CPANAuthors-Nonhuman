@@ -1,9 +1,9 @@
 use strict;
 use warnings;
 package Acme::CPANAuthors::Nonhuman;
+# vim: set ts=8 sts=4 sw=4 tw=115 et :
 # ABSTRACT: We are non-human CPAN authors
 # KEYWORDS: acmeism cpan authors animals fun
-# vim: set ts=8 sts=4 sw=4 tw=115 et :
 
 our $VERSION = '0.025';
 
