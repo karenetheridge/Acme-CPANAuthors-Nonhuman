@@ -15,7 +15,7 @@ use utf8;
     ref($plugin) . ' ' . $plugin->VERSION . "\n"
     . 'my %authors = (' . "\n" . do {
         my $filename = '00whois.xml';
-        @ids = split(' ', $DATA);   # awk-style emulation
+        @ids = grep { !/^#/ } split /\R/, $DATA;   # line-by-line, ignoring comments
         require HTTP::Tiny;
         my $response = HTTP::Tiny->new->mirror('http://www.cpan.org/authors/' . $filename, $filename);
         die "failed to fetch $filename: $response->{status} $response->{reason}\n"
@@ -175,8 +175,8 @@ list.
 
 =cut
 1;
-# this list isn't sorted by name but by the date they were added
 __DATA__
+# this list isn't sorted by name but by the date they were added
 ETHER
 MITHALDU
 AKIHITO
