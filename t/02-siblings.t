@@ -26,16 +26,15 @@ BEGIN { plan skip_all => 'Need a built version of Acme::CPANAuthors::Nonhuman fo
                 my $version;
                 if (not eval { $version = use_module($_)->VERSION; 1 })
                 {
+                    my $error = "Could not load $_: $@";
+                    $version = eval { $_->VERSION };
                     if ($_ eq 'Acme::CPANAuthors::You::re_using' and (not $version or $version < '0.08')) {
-                        ::diag($_ . ' has invalid $VERSION. Could not load due to a misparsed module installed locally?');
+                        ::diag($error);
                     }
                     else {
-                        ::fail($_ . ' has invalid $VERSION!!! please investigate!');
+                        ::fail($_);
                     }
-
-                    ::diag('error: ' . ($@ || ''));
-                    no strict 'refs';
-                    $version = ${$_ . '::VERSION'};
+                    $version = 'unknown' if not defined $version;
                 }
                 defined $version ? $version : 'undef';
             }
