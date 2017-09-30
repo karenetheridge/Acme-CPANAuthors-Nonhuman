@@ -5,7 +5,7 @@ package Acme::CPANAuthors::Nonhuman;
 # ABSTRACT: We are non-human CPAN authors
 # KEYWORDS: acmeism cpan authors animals fun
 
-our $VERSION = '0.026';
+our $VERSION = '0.027';
 
 use utf8;
 

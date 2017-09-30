@@ -1,5 +1,7 @@
 Revision history for Acme-CPANAuthors-Nonhuman
 
+{{$NEXT}}
+
 0.026     2017-09-30 19:14:01Z
           - updated distribution build code to use the metacpan v1 fastapi.
 
