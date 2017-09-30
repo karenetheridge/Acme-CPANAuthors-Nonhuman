@@ -33,7 +33,7 @@ my %authors = (
         require JSON::MaybeXS; JSON::MaybeXS->VERSION('1.001000');
         my $decoder = JSON::MaybeXS->new(utf8 => 0);
         $avatar_urls = { map {
-            $_ => ( ($decoder->decode(( HTTP::Tiny->new->get('http://api.metacpan.org/v0/author/' . $_) // {})->{content}) // {})->{gravatar_url} =~ s/s=\K130/80/gr )
+            $_ => ( ($decoder->decode(( HTTP::Tiny->new->get('https://fastapi.metacpan.org/v1/author/' . $_) // {})->{content}) // {})->{gravatar_url} =~ s/s=\K130/80/gr )
         } @ids };
 
         # list of hashes of { id, name, dists }, sorted by the number of that
